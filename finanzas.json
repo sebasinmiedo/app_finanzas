@@ -1,0 +1,94 @@
+{
+  "uuid": "2645624c-5278-491a-bf5d-7cc8d99aa8cf",
+  "lastMigration": 33,
+  "name": "Finanzas",
+  "endpointPrefix": "finanzas",
+  "latency": 0,
+  "port": 3001,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "c25e9967-082b-41a0-91a7-9f78ccac1b0c",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "10d2d9fe-8d47-4e2f-b435-ea7667743e99",
+          "body": "{\r\n  \"categorias\": [\r\n    {\r\n      \"id\": 1,\r\n      \"nombre\": \"Comida\",\r\n      \"descripcion\": \"Gastos destinados a la compra de comida\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"nombre\": \"Universidad\",\r\n      \"descripcion\": \"Gastos de la universidad\"\r\n    }\r\n  ],\r\n  \"transacciones\": [\r\n    {\r\n      \"id\": 1,\r\n      \"fecha\": \"2024-11-01\",\r\n      \"monto\": 150.75,\r\n      \"categoria\": 1,\r\n      \"descripcion\": \"Compra de alimentos en el supermercado\"\r\n    },\r\n    {\r\n      \"id\": 2,\r\n      \"fecha\": \"2024-11-15\",\r\n      \"monto\": 500.00,\r\n      \"categoria\": 2,\r\n      \"descripcion\": \"Pago de matrícula universitaria\"\r\n    }\r\n  ]\r\n}\r\n",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null,
+      "streamingMode": null,
+      "streamingInterval": 0
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "c25e9967-082b-41a0-91a7-9f78ccac1b0c"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}
