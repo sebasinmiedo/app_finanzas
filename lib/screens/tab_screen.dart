@@ -1,8 +1,3 @@
-// lib/tab_screen.dart
-
-import 'package:aplicacion_finanzas/data/agregar_transaccion_screen.dart';
-import 'package:aplicacion_finanzas/data/lista_transacciones_screen.dart';
-import 'package:aplicacion_finanzas/data/pricipal_screen.dart';
 import 'package:flutter/material.dart';
 
 class TabScreen extends StatefulWidget {
@@ -20,7 +15,7 @@ class _TabScreenState extends State<TabScreen>
   void initState() {
     super.initState();
     _tabController = TabController(
-        length: 5, vsync: this); // Cambia a 5 para incluir las nuevas pestañas
+        length: 4, vsync: this); // Cambia a 5 para incluir las nuevas pestañas
   }
 
   @override
@@ -33,6 +28,8 @@ class _TabScreenState extends State<TabScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Bienvenido'),
+        backgroundColor: const Color.fromARGB(255, 250, 199, 121),
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -55,11 +52,22 @@ class _TabScreenState extends State<TabScreen>
           controller: _tabController,
           isScrollable: true,
           tabs: const [
-            Tab(text: 'PRINCIPAL'),
-            Tab(text: 'TRANSACCIONES'),
-            Tab(text: 'CATEGORIAS'),
-            Tab(text: 'HOJA DE BALANCE'),
-            Tab(text: 'PRESUPUESTO'),
+            Tab(
+              text: 'PRINCIPAL',
+              icon: Icon(Icons.home),
+            ),
+            Tab(
+              text: 'TRANSACCIONES',
+              icon: Icon(Icons.monetization_on),
+            ),
+            Tab(
+              text: 'CATEGORIAS',
+              icon: Icon(Icons.category),
+            ),
+            Tab(
+              text: 'PRESUPUESTO',
+              icon: Icon(Icons.savings),
+            ),
           ],
         ),
       ),
@@ -103,18 +111,6 @@ class _TabScreenState extends State<TabScreen>
             ),
           ],
         ),
-      ),
-      body: TabBarView(
-        controller: _tabController,
-        children: [
-          PrincipalScreen(), // Ahora usamos PrincipalScreen
-          ListaTransaccionesScreen(),
-          AgregarTransaccionScreen(
-            onAgregar: (Transaccion) {},
-          ),
-          Center(child: Text('Calendar Screen')),
-          Center(child: Text('Budget Screen')),
-        ],
       ),
     );
   }
