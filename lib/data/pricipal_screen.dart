@@ -59,10 +59,6 @@ class _PrincipalScreenState extends State<PrincipalScreen> {
               child: const Text('Agregar Transacción'),
             ),
           ),
-          Container(
-            child: Image.network(
-                "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.syncfusion.com%2Fflutter-widgets%2Fflutter-charts&psig=AOvVaw3Uv_KwAUo_wLaqeuSZKkDo&ust=1732206376894000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCKiC_tWq64kDFQAAAAAdAAAAABAE"),
-          )
         ],
       ),
     );
